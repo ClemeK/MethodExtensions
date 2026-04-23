@@ -37,7 +37,6 @@
 
     // ************************
     /// <summary>
-    /// Clamps the number to be between lower and upper inclusive.
     /// </summary>
     /// <param name="nbr"></param>
     /// <param name="lower"></param>
@@ -86,7 +85,6 @@
 
     // ************************
     /// <summary>
-    /// Convert the number to a hexadecimal string representation.
     /// </summary>
     /// <param name="value"></param>
     /// <param name="lenght"></param>
@@ -100,7 +98,6 @@
 
     // ************************
     /// <summary>
-    /// Convert the number to a octal string representation.
     /// </summary>
     /// <param name="value"></param>
     /// <param name="lenght"></param>

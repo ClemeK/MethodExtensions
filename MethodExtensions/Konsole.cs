@@ -214,7 +214,6 @@ namespace MethodExtensions
         /// <returns></returns>
         public static int InputInt(string questionText, int Lower, int Higher)
         {
-            DisplayLine(120, questionText, Justify.Left,false);
 
             bool valid = false;
             int nbrAns = 0;
@@ -236,7 +235,6 @@ namespace MethodExtensions
                     valid = false;
                     DisplayLine(120, "Invalid input!");
 
-                    DisplayLine(120, questionText, Justify.Left, false);
                 }
             } while (!valid);
 
