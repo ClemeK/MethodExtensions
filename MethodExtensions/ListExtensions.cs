@@ -15,7 +15,14 @@
 
             for (int i = 0; i < items.Count; i++)
             {
-                output += " " + items[i].ToString();
+                if (i < 1)
+                {
+                    output += items[i].ToString();
+                }
+                else
+                {
+                    output += ", " + items[i].ToString();
+                }
             }
 
             return $"[{output.Trim()}]";

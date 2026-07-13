@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace RecipeBooks
+namespace MethodExtensions
 {
     // TODO - Clean up
     public enum enmCountry

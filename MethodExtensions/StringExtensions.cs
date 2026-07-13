@@ -1,4 +1,4 @@
-﻿public static class StringExtensionsBase
+﻿public static class StringExtensions
 {
     /// <summary>
     /// Capitalizes the first letter of the string and makes the rest of the letters lowercase.
@@ -146,7 +146,7 @@
     /// </summary>
     /// <param name="value"></param>
     /// <returns></returns>
-    public static string Reverse(this string value)
+    public static string ReverseChar(this string value)
     {
         string output = "";
 
@@ -157,7 +157,26 @@
 
         return output;
     }
+    
+    // ************************
+    /// <summary>
+    /// Reverse the word in a sentance
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public static string ReverseWords(this string value)
+    {
+        string output = string.Empty;
+        string[] words =  value.Split(' ');
 
+        for (int i = words.Length-1; i > 0; i--)
+        {
+            output = output + words[i] + " ";
+        }
+
+        return output;
+    }
+    
     // ************************
     /// <summary>
     /// Converts a binary string to its integer representation.
