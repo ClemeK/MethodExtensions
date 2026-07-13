@@ -1,6 +1,12 @@
-﻿namespace MethodExtensions
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MethodExtensions
 {
-    public static class FloatExtensions
+    public static class DoubleExtensions
     {
         // ************************
         /// <summary>
@@ -10,7 +16,7 @@
         /// <param name="low"></param>
         /// <param name="high"></param>
         /// <returns></returns>
-        public static bool Between(this float nbr, float low, float high)
+        public static bool Between(this double nbr, double low, double high)
         {
             if (nbr < low)
             {
@@ -33,7 +39,7 @@
         /// <param name="lower"></param>
         /// <param name="upper"></param>
         /// <returns></returns>
-        public static float Bounderies(this float nbr, float lower, float upper)
+        public static double Bounderies(this double nbr, double lower, double upper)
         {
             if (nbr < lower)
             {
@@ -50,11 +56,33 @@
 
         // ************************
         /// <summary>
+        /// Converts Degrees to Radians
+        /// </summary>
+        /// <param name="myValue"></param>
+        /// <returns></returns>
+        public static double ToRadians(this double myValue)
+        {
+            return myValue * (Math.PI / 180);
+        }
+
+        // ************************
+        /// <summary>
+        /// Converts Radians to Degrees
+        /// </summary>
+        /// <param name="myValue"></param>
+        /// <returns></returns>
+        public static double ToDegrees(this double myValue)
+        {
+            return myValue * (180 / Math.PI);
+        }
+
+        // ************************
+        /// <summary>
         /// Sqare the number
         /// </summary>
         /// <param name="myValue"></param>
         /// <returns></returns>
-        public static float Square(this float myValue)
+        public static double Square(this double myValue)
         {
             return myValue * myValue;
         }
@@ -65,31 +93,9 @@
         /// </summary>
         /// <param name="myValue"></param>
         /// <returns></returns>
-        public static float Cube(this float myValue)
+        public static double Cube(this double myValue)
         {
             return myValue * myValue * myValue;
-        }
-
-        // ************************
-        /// <summary>
-        /// Converts Degrees to Radians
-        /// </summary>
-        /// <param name="myValue"></param>
-        /// <returns></returns>
-        public static float ToRadians(this float myValue)
-        {
-            return myValue * ((float)Math.PI / 180);
-        }
-
-        // ************************
-        /// <summary>
-        /// Converts Radians to Degrees
-        /// </summary>
-        /// <param name="myValue"></param>
-        /// <returns></returns>
-        public static float ToDegrees(this float myValue)
-        {
-            return myValue * (180 / (float)Math.PI);
         }
     }
 }

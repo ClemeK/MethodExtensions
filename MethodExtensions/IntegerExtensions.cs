@@ -110,7 +110,29 @@
     }
 
     // ************************
-    // From Stach Overflow
+    /// <summary>
+    /// Sqare the number
+    /// </summary>
+    /// <param name="myValue"></param>
+    /// <returns></returns>
+    public static double Square(this int myValue)
+    {
+        return myValue * myValue;
+    }
+
+    // ************************
+    /// <summary>
+    /// Cube the number
+    /// </summary>
+    /// <param name="myValue"></param>
+    /// <returns></returns>
+    public static double Cube(this int myValue)
+    {
+        return myValue * myValue * myValue;
+    }
+    
+    // ************************
+    // From stack Overflow
     // https://stackoverflow.com/questions/3213/convert-integers-to-written-numbers
 
     /// <summary>
@@ -136,7 +158,7 @@
         return FriendlyInteger(n, "", 0);
     }
 
-    // *****
+    // ************************
     private static string[] ones = new string[] { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
 
     private static string[] teens = new string[] { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
