@@ -23,6 +23,7 @@
             "Bounce" ,
             "eNums" ,
             "Doubles" ,
+            "diCtionarys" ,
             "Quit"};
 
                 string[] menuKey = {
@@ -36,6 +37,7 @@
             "Bb" ,
             "Ee" ,
             "Dd" ,
+            "Cc" ,
             "Qq"};
 
                 Konsole.DisplayMenu2(menuOptions, menuKey);
@@ -82,6 +84,10 @@
 
                     case "D":
                         DoublesMethods();
+                        break;
+
+                    case "C":
+                        DictionarysMethods();
                         break;
 
                     case "Q":
@@ -204,6 +210,21 @@
         }
 
         // ========================
+        private static void DictionarysMethods()
+        {
+            Konsole.SimpleHeading(80, '*', "Dictionary");
+
+            Dictionary<string, int> temp = new Dictionary<string, int> { { "One", 1 }, { "Two", 2 }, { "Three", 3 } };
+
+            Console.WriteLine($"Dictionary Temp contains:");
+            Console.WriteLine(temp.ToPrint());
+
+            // ************************************************
+            Konsole.Pause();
+        }
+
+        // ========================
+
         private static void EnumsMethods()
         {
             Konsole.SimpleHeading(80, '*', "eNums");
